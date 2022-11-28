@@ -151,6 +151,8 @@ contract CustomSmartWallet is IForwarder {
         require(msg.sender == req.relayHub, "Invalid caller");
 
         _verifySig(suffixData, req, sig);
+        // solhint-disable-next-line not-rely-on-time
+        require(req.validUntilTime == 0 || req.validUntilTime > block.timestamp, "FWD: request expired");
         nonce++;
 
         if(req.tokenAmount > 0){
