@@ -429,8 +429,8 @@ const baseDeployRequest: DeployRequestStruct = {
     nonce: '0',
     tokenAmount: '1',
     tokenGas: '50000',
-    index: '0',
     validUntilTime: '0',
+    index: '0',
     data: '0x'
 };
 
