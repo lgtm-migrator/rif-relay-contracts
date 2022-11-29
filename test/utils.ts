@@ -139,6 +139,7 @@ export async function createSmartWallet(
             tokenAmount: tokenAmount,
             tokenGas: tokenGas,
             recoverer: recoverer,
+            validUntilTime: '0',
             index: '0'
         },
         relayData: {
@@ -221,6 +222,7 @@ export async function createCustomSmartWallet(
             tokenAmount: tokenAmount,
             tokenGas: tokenGas,
             recoverer: recoverer,
+            validUntilTime: '0',
             index: '0'
         },
         relayData: {
@@ -428,6 +430,7 @@ const baseDeployRequest: DeployRequestStruct = {
     tokenAmount: '1',
     tokenGas: '50000',
     index: '0',
+    validUntilTime: '0',
     data: '0x'
 };
 
@@ -441,6 +444,7 @@ const baseRelayRequest: ForwardRequest = {
     data: '0x',
     tokenContract: constants.ZERO_ADDRESS,
     tokenAmount: '1',
+    validUntilTime: '0',
     tokenGas: '50000'
 };
 
