@@ -1104,6 +1104,7 @@ contract(
                         tokenAmount: '1',
                         tokenGas: '50000',
                         recoverer: constants.ZERO_ADDRESS,
+                        validUntilTime: '0',
                         index: '0'
                     },
                     relayData: {

@@ -195,7 +195,6 @@ contract CustomSmartWalletFactory is ICustomSmartWalletFactory {
                 feesReceiver,
                 req.tokenAmount,
                 req.tokenGas,
-                req.validUntilTime,
                 req.data
             )
         );
