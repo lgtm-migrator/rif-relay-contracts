@@ -856,7 +856,8 @@ contract(
                         gas: gasLimit,
                         tokenContract: token.address,
                         tokenAmount: '1',
-                        tokenGas: '50000'
+                        tokenGas: '50000',
+                        validUntilTime: '0'
                     },
                     relayData: {
                         gasPrice,
