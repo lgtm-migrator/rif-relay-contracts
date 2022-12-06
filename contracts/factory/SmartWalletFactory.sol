@@ -152,6 +152,8 @@ contract SmartWalletFactory is ISmartWalletFactory {
 
         require(msg.sender == req.relayHub, "Invalid caller");
         _verifySig(req, suffixData, sig);
+        // solhint-disable-next-line not-rely-on-time
+        require(req.validUntilTime == 0 || req.validUntilTime > block.timestamp, "SW: request expired");
         nonces[req.from]++;
 
         //a6b63eb8  =>  initialize(address owner,address tokenAddr,address tokenRecipient,uint256 tokenAmount,uint256 tokenGas)  
